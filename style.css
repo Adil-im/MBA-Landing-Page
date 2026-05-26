@@ -1,0 +1,171 @@
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Gold stays constant across modes */
+  :root { --gold: #b8933f; --gold-light: #e8d5a3; }
+
+  .serif { font-family: 'Cormorant Garamond', serif; }
+
+  /* Hero radial glow */
+  .hero-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(184,147,63,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* Pill badge */
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .hero-title em { font-style: italic; color: var(--gold); }
+
+  .section-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .section-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 24px; height: 1px;
+    background: var(--gold);
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .section-title em { font-style: italic; color: var(--gold); }
+
+  .stat-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .stat-label { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.4rem; }
+
+  .year-pill {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 0.2rem 0.7rem;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+  }
+
+  .stars { color: var(--gold); font-size: 0.85rem; letter-spacing: 0.05em; }
+  .review-card { border-top: 2px solid var(--gold); padding-top: 1.5rem; }
+
+  .feat-icon {
+    width: 42px; height: 42px;
+    border: 1px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; margin-bottom: 1rem; color: var(--gold);
+  }
+
+  /* FAQ */
+  details > summary { cursor: pointer; list-style: none; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] summary .faq-plus::after { content: '−'; }
+  .faq-plus::after { content: '+'; font-size: 1.2rem; color: var(--gold); }
+
+  /* Form (always dark bg) */
+  .form-wrap { background: #0d0d0d; color: #f9f7f4; padding: 3rem; }
+  .dark .form-wrap { background: #111; }
+  .form-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    color: #f9f7f4;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding: 0.75rem 0;
+    outline: none;
+    transition: border-color 0.2s;
+    appearance: none; -webkit-appearance: none;
+  }
+  .form-input::placeholder { color: rgba(255,255,255,0.3); }
+  .form-input:focus { border-bottom-color: var(--gold); }
+  .form-input option { color: #0d0d0d; background: #fff; }
+  .form-label {
+    font-size: 0.68rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: rgba(255,255,255,0.4);
+    display: block; margin-bottom: 0.25rem;
+  }
+  .btn-submit {
+    background: var(--gold); color: #fff; border: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 1.1rem 2.5rem; cursor: pointer; width: 100%;
+    transition: opacity 0.2s;
+  }
+  .btn-submit:hover { opacity: 0.85; }
+
+  /* Toggle button */
+  .theme-toggle {
+    width: 44px; height: 24px;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid;
+    transition: background 0.3s, border-color 0.3s;
+    flex-shrink: 0;
+  }
+  .theme-toggle-knob {
+    position: absolute;
+    top: 3px; left: 3px;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    transition: transform 0.3s, background 0.3s;
+  }
+  .dark .theme-toggle-knob { transform: translateX(20px); }
+
+  /* Scroll fade */
+  @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+  .fade-up { animation: fadeUp 0.7s ease both; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.35s; }
+
+  /* Transitions for smooth mode switch */
+  section, nav, footer, .card, hr, details { transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; }

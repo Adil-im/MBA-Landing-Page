@@ -3,828 +3,613 @@
 <html lang="en" class="">
 <!-- dark red color for background cards and form bg  #3D0C02 --!> 
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="MBA at Eva Stalin Business School, Chennai. Alagappa University Degree. Real career, real placement. Admissions Open 2026." />
-<title>MBA Programme – Eva Stalin Business School | Admissions Open 2026</title>
-<script>
-  // Apply saved preference before paint to avoid flash
-  (function() {
-    const saved = localStorage.getItem('theme');
-    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
-    }
-  })();
-</script>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    darkMode: 'class',
-  }
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-<style>
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 300;
-    -webkit-font-smoothing: antialiased;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
 
-  /* Gold stays constant across modes */
-  :root { --gold: #b8933f; --gold-light: #e8d5a3; }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="MBA at Eva Stalin Business School, Chennai. Alagappa University Degree. Real career, real placement. Admissions Open 2026." />
+    <title>MBA Programme – Eva Stalin Business School | Admissions Open 2026</title>
+    <link rel='stylesheet' href='style.css'>	
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+	darkMode: 'class',
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />    
 
-  .serif { font-family: 'Cormorant Garamond', serif; }
-
-  /* Hero radial glow */
-  .hero-glow::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(184,147,63,0.08) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  /* Pill badge */
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    font-size: 0.7rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    padding: 0.4rem 1rem;
-    border-radius: 100px;
-  }
-
-  .hero-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.8rem, 6vw, 5.5rem);
-    line-height: 1.05;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-  }
-  .hero-title em { font-style: italic; color: var(--gold); }
-
-  .section-eyebrow {
-    font-size: 0.68rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-  .section-eyebrow::before {
-    content: '';
-    display: inline-block;
-    width: 24px; height: 1px;
-    background: var(--gold);
-  }
-
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 4vw, 3.25rem);
-    font-weight: 600;
-    line-height: 1.1;
-    letter-spacing: -0.01em;
-  }
-  .section-title em { font-style: italic; color: var(--gold); }
-
-  .stat-val {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    font-weight: 600;
-    color: var(--gold);
-    line-height: 1;
-  }
-  .stat-label { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.4rem; }
-
-  .year-pill {
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--gold);
-    border: 1px solid var(--gold);
-    padding: 0.2rem 0.7rem;
-    display: inline-block;
-    margin-bottom: 0.75rem;
-  }
-
-  .stars { color: var(--gold); font-size: 0.85rem; letter-spacing: 0.05em; }
-  .review-card { border-top: 2px solid var(--gold); padding-top: 1.5rem; }
-
-  .feat-icon {
-    width: 42px; height: 42px;
-    border: 1px solid var(--gold);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.1rem; margin-bottom: 1rem; color: var(--gold);
-  }
-
-  /* FAQ */
-  details > summary { cursor: pointer; list-style: none; }
-  details > summary::-webkit-details-marker { display: none; }
-  details[open] summary .faq-plus::after { content: '−'; }
-  .faq-plus::after { content: '+'; font-size: 1.2rem; color: var(--gold); }
-
-  /* Form (always dark bg) */
-  .form-wrap { background: #0d0d0d; color: #f9f7f4; padding: 3rem; }
-  .dark .form-wrap { background: #111; }
-  .form-input {
-    width: 100%;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    color: #f9f7f4;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 300;
-    padding: 0.75rem 0;
-    outline: none;
-    transition: border-color 0.2s;
-    appearance: none; -webkit-appearance: none;
-  }
-  .form-input::placeholder { color: rgba(255,255,255,0.3); }
-  .form-input:focus { border-bottom-color: var(--gold); }
-  .form-input option { color: #0d0d0d; background: #fff; }
-  .form-label {
-    font-size: 0.68rem; letter-spacing: 0.12em;
-    text-transform: uppercase; color: rgba(255,255,255,0.4);
-    display: block; margin-bottom: 0.25rem;
-  }
-  .btn-submit {
-    background: var(--gold); color: #fff; border: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
-    padding: 1.1rem 2.5rem; cursor: pointer; width: 100%;
-    transition: opacity 0.2s;
-  }
-  .btn-submit:hover { opacity: 0.85; }
-
-  /* Toggle button */
-  .theme-toggle {
-    width: 44px; height: 24px;
-    border-radius: 100px;
-    position: relative;
-    cursor: pointer;
-    border: 1px solid;
-    transition: background 0.3s, border-color 0.3s;
-    flex-shrink: 0;
-  }
-  .theme-toggle-knob {
-    position: absolute;
-    top: 3px; left: 3px;
-    width: 16px; height: 16px;
-    border-radius: 50%;
-    transition: transform 0.3s, background 0.3s;
-  }
-  .dark .theme-toggle-knob { transform: translateX(20px); }
-
-  /* Scroll fade */
-  @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
-  .fade-up { animation: fadeUp 0.7s ease both; }
-  .delay-1 { animation-delay: 0.1s; }
-  .delay-2 { animation-delay: 0.2s; }
-  .delay-3 { animation-delay: 0.35s; }
-
-  /* Transitions for smooth mode switch */
-  section, nav, footer, .card, hr, details { transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; }
-</style>
 </head>
 
-<!-- LIGHT: bg-[#f9f7f4] text-[#0d0d0d]  |  DARK: bg-[#0f0f0f] text-[#e8e4de] -->
+    <!-- LIGHT: bg-[#f9f7f4] text-[#0d0d0d]  |  DARK: bg-[#0f0f0f] text-[#e8e4de] -->
 <body class="bg-[#f9f7f4] text-[#0d0d0d] dark:bg-[#0f0f0f] dark:text-[#e8e4de]">
 
-<!-- Announcement Bar -->
-<div class="bg-[#0d0d0d] dark:bg-[#1a1a1a] text-[#e8d5a3] text-[0.72rem] tracking-[0.12em] uppercase py-2 text-center">
-  <span>🎓 Admissions Open 2026 — MBA Programme</span>
-  &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="tel:+919280251831" class="underline underline-offset-2">📞 92802 51831</a>
-</div>
-
-<!-- Nav -->
-<nav class="sticky top-0 z-50 bg-[#f9f7f4] dark:bg-[#0f0f0f] border-b border-[#e2ddd8] dark:border-[#2a2a2a]">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-    <div class="serif text-xl font-semibold">Eva Stalin <span style="color:var(--gold)">Business School</span></div>
-    <div class="flex items-center gap-4">
-      <!-- Dark mode toggle -->
-      <button id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()"
-        class="theme-toggle bg-[#e2ddd8] dark:bg-[#2a2a2a] border-[#c8c3be] dark:border-[#3a3a3a]">
-        <div class="theme-toggle-knob bg-[#0d0d0d] dark:bg-[#e8d5a3]"></div>
-      </button>
-      <span class="text-[0.65rem] tracking-widest uppercase text-[#6b6560] dark:text-[#ffffff] hidden sm:inline select-none" id="modeLabel">Light</span>
-      <a href="#apply"
-        class="hidden sm:inline-block bg-[#0d0d0d] dark:bg-[#e8d5a3] text-[#f9f7f4] dark:text-[#0d0d0d] text-[0.8rem] tracking-[0.1em] uppercase px-6 py-2.5 hover:opacity-80 transition-opacity"
-        style="text-decoration:none">Apply Now</a>
+    <!-- Announcement Bar -->
+    <div class="bg-[#0d0d0d] dark:bg-[#1a1a1a] text-[#e8d5a3] text-[0.72rem] tracking-[0.12em] uppercase py-2 text-center">
+      <span>🎓 Admissions Open 2026 — MBA Programme</span>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="tel:+919280251831" class="underline underline-offset-2">📞 92802 51831</a>
     </div>
-  </div>
-</nav>
 
-<!-- ═══ HERO ═══ -->
-<section class="hero-glow relative min-h-[92vh] flex items-center py-20 px-6 overflow-hidden bg-[#f9f7f4] dark:bg-[#0f0f0f]">
-  <div class="max-w-6xl mx-auto w-full">
-    <div class="max-w-3xl">
-      <div class="hero-badge fade-up mb-8">✦ Alagappa University Affiliated &nbsp;·&nbsp; Chennai, Tambaram</div>
-      <h1 class="hero-title fade-up delay-1 mb-6">Master of<br/>Business<br/><em>Administration</em></h1>
-      <p class="fade-up delay-2 mb-10 max-w-xl text-[#6b6560] dark:text-[#8a8580] leading-relaxed" style="font-size:clamp(1rem,2vw,1.25rem)">
-        2-Year MBA Programme at Eva Stalin Business School — designed to build leaders who combine strategic thinking with real-world execution.
-      </p>
-      <div class="fade-up delay-3 flex flex-wrap gap-4">
-        <a href="#apply"
-          class="bg-[#0d0d0d] dark:bg-[#e8d5a3] text-[#f9f7f4] dark:text-[#0d0d0d] text-[0.8rem] tracking-[0.1em] uppercase px-10 py-4 hover:opacity-80 transition-opacity"
-          style="text-decoration:none">Start Your MBA Journey →</a>
-        <a href="#programme"
-          class="border border-[#0d0d0d] dark:border-[#e8d5a3] text-[#0d0d0d] dark:text-[#e8d5a3] text-[0.8rem] tracking-[0.1em] uppercase px-10 py-4 hover:bg-[#0d0d0d] hover:text-[#f9f7f4] dark:hover:bg-[#e8d5a3] dark:hover:text-[#0d0d0d] transition-colors"
-          style="text-decoration:none">Explore Programme</a>
+    <!-- Nav -->
+    <nav class="sticky top-0 z-50 bg-[#f9f7f4] dark:bg-[#0f0f0f] border-b border-[#e2ddd8] dark:border-[#2a2a2a]">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+	<div class="serif text-xl font-semibold">Eva Stalin <span style="color:var(--gold)">Business School</span></div>
+	<div class="flex items-center gap-4">
+	  <!-- Dark mode toggle -->
+	  <button id="themeToggle" aria-label="Toggle dark mode" onclick="toggleTheme()"
+	    class="theme-toggle bg-[#e2ddd8] dark:bg-[#2a2a2a] border-[#c8c3be] dark:border-[#3a3a3a]">
+	    <div class="theme-toggle-knob bg-[#0d0d0d] dark:bg-[#e8d5a3]"></div>
+	  </button>
+	  <span class="text-[0.65rem] tracking-widest uppercase text-[#6b6560] dark:text-[#ffffff] hidden sm:inline select-none" id="modeLabel">Light</span>
+	  <a href="#apply"
+	    class="hidden sm:inline-block bg-[#0d0d0d] dark:bg-[#e8d5a3] text-[#f9f7f4] dark:text-[#0d0d0d] text-[0.8rem] tracking-[0.1em] uppercase px-6 py-2.5 hover:opacity-80 transition-opacity"
+	    style="text-decoration:none">Apply Now</a>
+	</div>
       </div>
-      <!-- Stats -->
-      <div class="mt-16 pt-10 border-t border-[#e2ddd8] dark:border-[#2a2a2a] grid grid-cols-2 sm:grid-cols-4 gap-8 fade-up delay-3">
-        <div><div class="stat-val">2 Yr</div><div class="stat-label text-[#6b6560] dark:text-[#6a6560]">Full-Time MBA Degree</div></div>
-        <div><div class="stat-val">100%</div><div class="stat-label text-[#6b6560] dark:text-[#6a6560]">Placement-Oriented</div></div>
-        <div><div class="stat-val">₹21T</div><div class="stat-label text-[#6b6560] dark:text-[#6a6560]">India's Business Opportunity</div></div>
-        <div><div class="stat-val">2026</div><div class="stat-label text-[#6b6560] dark:text-[#6a6560]">Batch — Limited Seats</div></div>
-      </div>
-    </div>
-  </div>
-</section>
+    </nav>
 
-<hr class="border-none border-t border-[#e2ddd8] dark:border-[#2a2a2a]" style="border-top-width:1px" />
+    <!-- ═══ HERO ═══ -->
+    <section class="hero-glow relative min-h-[92vh] flex items-center py-20 px-6 overflow-hidden bg-[#f9f7f4] dark:bg-[#0f0f0f]">
+      <div class="max-w-6xl mx-auto w-full">
+	<div class="max-w-3xl">
+	  <div class="hero-badge fade-up mb-8">✦ Alagappa University Affiliated &nbsp;·&nbsp; Chennai, Tambaram</div>
+	  <h1 class="hero-title fade-up delay-1 mb-6">Master of<br/>Business<br/><em>Administration</em></h1>
+	  <p class="fade-up delay-2 mb-10 max-w-xl text-[#6b6560] dark:text-[#8a8580] leading-relaxed" style="font-size:clamp(1rem,2vw,1.25rem)">
+	    2-Year MBA Programme at Eva Stalin Business School — designed to build leaders who combine strategic thinking with real-world execution.
+	  </p>
+	  <div class="fade-up delay-3 flex flex-wrap gap-4">
+	    <a href="#apply"
+	      class="bg-[#0d0d0d] dark:bg-[#e8d5a3] text-[#f9f7f4] dark:text-[#0d0d0d] text-[0.8rem] tracking-[0.1em] uppercase px-10 py-4 hover:opacity-80 transition-opacity"
+	      style="text-decoration:none">Start Your MBA Journey →</a>
+	    <a href="#programme"
+	      class="border border-[#0d0d0d] dark:border-[#e8d5a3] text-[#0d0d0d] dark:text-[#e8d5a3] text-[0.8rem] tracking-[0.1em] uppercase px-10 py-4 hover:bg-[#0d0d0d] hover:text-[#f9f7f4] dark:hover:bg-[#e8d5a3] dark:hover:text-[#0d0d0d] transition-colors"
+	      style="text-decoration:none">Explore Programme</a>
+	  </div>
+	  <!-- Stats -->
+	  <div class="mt-16 pt-10 border-t border-[#e2ddd8] dark:border-[#2a2a2a] grid grid-cols-2 sm:grid-cols-4 gap-8 fade-up delay-3">
+	    <div><div class="stat-val">2 Yr</div><div class="stat-label text-[#6b6560] dark:text-[#6a6560]">Full-Time MBA Degree</div></div>
+	    <div><div class="stat-val">100%</div><div class="stat-label text-[#6b6560] dark:text-[#6a6560]">Placement-Oriented</div></div>
+	    <div><div class="stat-val">₹21T</div><div class="stat-label text-[#6b6560] dark:text-[#6a6560]">India's Business Opportunity</div></div>
+	    <div><div class="stat-val">2026</div><div class="stat-label text-[#6b6560] dark:text-[#6a6560]">Batch — Limited Seats</div></div>
+	  </div>
+	</div>
+      </div>
+    </section>
 
-<!-- ═══ FOR WHOM ═══ -->
-<section class="py-20 px-6 bg-[#f9f7f4] dark:bg-[#0f0f0f]">
-  <div class="max-w-6xl mx-auto">
-    <div class="section-eyebrow">About This Programme</div>
-    <h2 class="section-title mb-6">Is Business Leadership<br/>Your <em>Calling?</em></h2>
-    <div class="grid md:grid-cols-2 gap-16 mt-12">
-      <div>
-        <p class="text-[#6b6560] dark:text-[#8a8580] leading-relaxed mb-6">
-          You've finished your undergraduate degree — and you know you want more than an entry-level job. You want to lead, build, and shape how organisations grow.
-        </p>
-        <p class="text-[#6b6560] dark:text-[#8a8580] leading-relaxed mb-6">
-          But the right MBA programme matters. Generic programmes give you theory. Eva Stalin Business School's MBA gives you strategy, tools, and live exposure — built for Tamil Nadu's fast-growing economy.
-        </p>
-        <p class="text-[#6b6560] dark:text-[#8a8580] leading-relaxed">
-          Our Alagappa University affiliated MBA is structured for graduates who want to move up fast — into management, entrepreneurship, or senior roles in business and consulting.
-        </p>
-        <div class="mt-8">
-          <a href="#apply" class="bg-[#0d0d0d] dark:bg-[#e8d5a3] text-[#f9f7f4] dark:text-[#0d0d0d] text-[0.8rem] tracking-[0.1em] uppercase px-10 py-4 hover:opacity-80 transition-opacity inline-block" style="text-decoration:none">Get Free Counselling →</a>
-        </div>
-      </div>
-      <div class="space-y-6">
-        <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-colors">
-          <div class="feat-icon">🎯</div>
-          <div class="font-medium mb-1">Graduates Ready for Management</div>
-          <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">Any discipline can apply — Science, Arts, Commerce. If you have a degree and ambition, this MBA is built for you.</p>
-        </div>
-        <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-colors">
-          <div class="feat-icon">🏢</div>
-          <div class="font-medium mb-1">Career Changers &amp; Upskillers</div>
-          <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">Already working? An MBA from a recognised university accelerates your path to leadership roles.</p>
-        </div>
-        <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-colors">
-          <div class="feat-icon">🚀</div>
-          <div class="font-medium mb-1">Future Entrepreneurs</div>
-          <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">Want to start or scale a business? Our entrepreneurship track gives you the frameworks that actually work.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <hr class="border-none border-t border-[#e2ddd8] dark:border-[#2a2a2a]" style="border-top-width:1px" />
 
-<hr class="border-none" style="border-top:1px solid" class="border-[#e2ddd8] dark:border-[#2a2a2a]" />
-<div class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]"></div>
+    <!-- ═══ FOR WHOM ═══ -->
+    <section class="py-20 px-6 bg-[#f9f7f4] dark:bg-[#0f0f0f]">
+      <div class="max-w-6xl mx-auto">
+	<div class="section-eyebrow">About This Programme</div>
+	<h2 class="section-title mb-6">Is Business Leadership<br/>Your <em>Calling?</em></h2>
+	<div class="grid md:grid-cols-2 gap-16 mt-12">
+	  <div>
+	    <p class="text-[#6b6560] dark:text-[#8a8580] leading-relaxed mb-6">
+	      You've finished your undergraduate degree — and you know you want more than an entry-level job. You want to lead, build, and shape how organisations grow.
+	    </p>
+	    <p class="text-[#6b6560] dark:text-[#8a8580] leading-relaxed mb-6">
+	      But the right MBA programme matters. Generic programmes give you theory. Eva Stalin Business School's MBA gives you strategy, tools, and live exposure — built for Tamil Nadu's fast-growing economy.
+	    </p>
+	    <p class="text-[#6b6560] dark:text-[#8a8580] leading-relaxed">
+	      Our Alagappa University affiliated MBA is structured for graduates who want to move up fast — into management, entrepreneurship, or senior roles in business and consulting.
+	    </p>
+	    <div class="mt-8">
+	      <a href="#apply" class="bg-[#0d0d0d] dark:bg-[#e8d5a3] text-[#f9f7f4] dark:text-[#0d0d0d] text-[0.8rem] tracking-[0.1em] uppercase px-10 py-4 hover:opacity-80 transition-opacity inline-block" style="text-decoration:none">Get Free Counselling →</a>
+	    </div>
+	  </div>
+	  <div class="space-y-6">
+	    <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-colors">
+	      <div class="feat-icon">🎯</div>
+	      <div class="font-medium mb-1">Graduates Ready for Management</div>
+	      <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">Any discipline can apply — Science, Arts, Commerce. If you have a degree and ambition, this MBA is built for you.</p>
+	    </div>
+	    <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-colors">
+	      <div class="feat-icon">🏢</div>
+	      <div class="font-medium mb-1">Career Changers &amp; Upskillers</div>
+	      <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">Already working? An MBA from a recognised university accelerates your path to leadership roles.</p>
+	    </div>
+	    <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-colors">
+	      <div class="feat-icon">🚀</div>
+	      <div class="font-medium mb-1">Future Entrepreneurs</div>
+	      <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">Want to start or scale a business? Our entrepreneurship track gives you the frameworks that actually work.</p>
+	    </div>
+	  </div>
+	</div>
+      </div>
+    </section>
 
-<!-- ═══ CONCERNS ═══ -->
-<section class="py-20 px-6 bg-white dark:bg-[#111]">
-  <div class="max-w-6xl mx-auto">
-    <div class="section-eyebrow">Common Concerns</div>
-    <h2 class="section-title mb-12">What Families<br/><em>Worry About</em></h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-all hover:-translate-y-0.5 card">
-        <div class="text-2xl mb-4">😔</div>
-        <div class="font-medium mb-2 text-sm">"Will an MBA actually lead to a better job?"</div>
-        <p class="text-xs text-[#6b6560] dark:text-[#7a7570] leading-relaxed">MBA graduates consistently move into higher-paying management roles. India's demand for business managers has grown 40% in five years.</p>
-      </div>
-      <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-all hover:-translate-y-0.5 card">
-        <div class="text-2xl mb-4">😰</div>
-        <div class="font-medium mb-2 text-sm">"Is this the right college?"</div>
-        <p class="text-xs text-[#6b6560] dark:text-[#7a7570] leading-relaxed">EBS holds the Business School of the Year 2026 award for Tamil Nadu. Alagappa University affiliation means your degree carries real weight.</p>
-      </div>
-      <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-all hover:-translate-y-0.5 card">
-        <div class="text-2xl mb-4">🤯</div>
-        <div class="font-medium mb-2 text-sm">"What if industry experience matters more?"</div>
-        <p class="text-xs text-[#6b6560] dark:text-[#7a7570] leading-relaxed">Our MBA combines live projects, internships, and industry masterclasses — so you graduate with both the degree and the experience.</p>
-      </div>
-      <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-all hover:-translate-y-0.5 card">
-        <div class="text-2xl mb-4">⏳</div>
-        <div class="font-medium mb-2 text-sm">"Is 2 years worth it?"</div>
-        <p class="text-xs text-[#6b6560] dark:text-[#7a7570] leading-relaxed">Two focused years can add a decade to your career trajectory. The right MBA is not a cost — it's the highest-return investment you can make.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <!--<hr class="border-none" style="border-top:1px solid" class="border-[#e2ddd8] dark:border-[#2a2a2a]" /> --!>
+    <div class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]"></div>
 
-<div class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]"></div>
+    <!-- ═══ CONCERNS ═══ -->
+    <section class="py-20 px-6 bg-white dark:bg-[#111]">
+      <div class="max-w-6xl mx-auto">
+	<div class="section-eyebrow">Common Concerns</div>
+	<h2 class="section-title mb-12">What Families<br/><em>Worry About</em></h2>
+	<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+	  <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-all hover:-translate-y-0.5 card">
+	    <div class="text-2xl mb-4">😔</div>
+	    <div class="font-medium mb-2 text-sm">"Will an MBA actually lead to a better job?"</div>
+	    <p class="text-xs text-[#6b6560] dark:text-[#7a7570] leading-relaxed">MBA graduates consistently move into higher-paying management roles. India's demand for business managers has grown 40% in five years.</p>
+	  </div>
+	  <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-all hover:-translate-y-0.5 card">
+	    <div class="text-2xl mb-4">😰</div>
+	    <div class="font-medium mb-2 text-sm">"Is this the right college?"</div>
+	    <p class="text-xs text-[#6b6560] dark:text-[#7a7570] leading-relaxed">EBS holds the Business School of the Year 2026 award for Tamil Nadu. Alagappa University affiliation means your degree carries real weight.</p>
+	  </div>
+	  <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-all hover:-translate-y-0.5 card">
+	    <div class="text-2xl mb-4">🤯</div>
+	    <div class="font-medium mb-2 text-sm">"What if industry experience matters more?"</div>
+	    <p class="text-xs text-[#6b6560] dark:text-[#7a7570] leading-relaxed">Our MBA combines live projects, internships, and industry masterclasses — so you graduate with both the degree and the experience.</p>
+	  </div>
+	  <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-all hover:-translate-y-0.5 card">
+	    <div class="text-2xl mb-4">⏳</div>
+	    <div class="font-medium mb-2 text-sm">"Is 2 years worth it?"</div>
+	    <p class="text-xs text-[#6b6560] dark:text-[#7a7570] leading-relaxed">Two focused years can add a decade to your career trajectory. The right MBA is not a cost — it's the highest-return investment you can make.</p>
+	  </div>
+	</div>
+      </div>
+    </section>
 
-<!-- ═══ BEFORE / AFTER ═══ -->
-<section class="py-20 px-6 bg-[#f9f7f4] dark:bg-[#0f0f0f]">
-  <div class="max-w-6xl mx-auto">
-    <div class="section-eyebrow">The Transformation</div>
-    <h2 class="section-title mb-12">Before EBS vs.<br/><em>After EBS</em></h2>
-    <div class="grid md:grid-cols-[1fr_auto_1fr]">
-      <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] p-8">
-        <div class="text-xs tracking-widest uppercase text-[#6b6560] dark:text-[#5a5550] mb-6">Where You Are Now</div>
-        <ul class="space-y-4">
-          <li class="flex gap-3 text-sm text-[#6b6560] dark:text-[#7a7570]"><span class="text-red-400 mt-0.5">✗</span> Degree without management clarity</li>
-          <li class="flex gap-3 text-sm text-[#6b6560] dark:text-[#7a7570]"><span class="text-red-400 mt-0.5">✗</span> No strategic business framework</li>
-          <li class="flex gap-3 text-sm text-[#6b6560] dark:text-[#7a7570]"><span class="text-red-400 mt-0.5">✗</span> Limited professional network</li>
-          <li class="flex gap-3 text-sm text-[#6b6560] dark:text-[#7a7570]"><span class="text-red-400 mt-0.5">✗</span> Unsure how to move into leadership</li>
-        </ul>
-      </div>
-      <div class="hidden md:flex items-center justify-center px-6 text-2xl" style="color:var(--gold)">→</div>
-      <div class="border border-[var(--gold)] p-8 bg-[#fdf9f0] dark:bg-[#1a1508]">
-        <div class="text-xs tracking-widest uppercase mb-6" style="color:var(--gold)">2 Years From Now</div>
-        <ul class="space-y-4">
-          <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5">✓</span> Recognised MBA from Alagappa University</li>
-          <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5">✓</span> Real business skills across finance, marketing, ops</li>
-          <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5">✓</span> Industry network + placement support</li>
-          <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5">✓</span> Ready for management roles or entrepreneurship</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]"></div>
 
-<div class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]"></div>
+    <!-- ═══ BEFORE / AFTER ═══ -->
+    <section class="py-20 px-6 bg-[#f9f7f4] dark:bg-[#0f0f0f]">
+      <div class="max-w-6xl mx-auto">
+	<div class="section-eyebrow">The Transformation</div>
+	<h2 class="section-title mb-12">Before EBS vs.<br/><em>After EBS</em></h2>
+	<div class="grid md:grid-cols-[1fr_auto_1fr]">
+	  <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] p-8">
+	    <div class="text-xs tracking-widest uppercase text-[#6b6560] dark:text-[#5a5550] mb-6">Where You Are Now</div>
+	    <ul class="space-y-4">
+	      <li class="flex gap-3 text-sm text-[#6b6560] dark:text-[#7a7570]"><span class="text-red-400 mt-0.5">✗</span> Degree without management clarity</li>
+	      <li class="flex gap-3 text-sm text-[#6b6560] dark:text-[#7a7570]"><span class="text-red-400 mt-0.5">✗</span> No strategic business framework</li>
+	      <li class="flex gap-3 text-sm text-[#6b6560] dark:text-[#7a7570]"><span class="text-red-400 mt-0.5">✗</span> Limited professional network</li>
+	      <li class="flex gap-3 text-sm text-[#6b6560] dark:text-[#7a7570]"><span class="text-red-400 mt-0.5">✗</span> Unsure how to move into leadership</li>
+	    </ul>
+	  </div>
+	  <div class="hidden md:flex items-center justify-center px-6 text-2xl" style="color:var(--gold)">→</div>
+	  <div class="border border-[var(--gold)] p-8 bg-[#fdf9f0] dark:bg-[#1a1508]">
+	    <div class="text-xs tracking-widest uppercase mb-6" style="color:var(--gold)">2 Years From Now</div>
+	    <ul class="space-y-4">
+	      <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5">✓</span> Recognised MBA from Alagappa University</li>
+	      <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5">✓</span> Real business skills across finance, marketing, ops</li>
+	      <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5">✓</span> Industry network + placement support</li>
+	      <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5">✓</span> Ready for management roles or entrepreneurship</li>
+	    </ul>
+	  </div>
+	</div>
+      </div>
+    </section>
 
-<!-- ═══ PROGRAMME ═══ -->
-<section id="programme" class="py-20 px-6 bg-white dark:bg-[#111]">
-  <div class="max-w-6xl mx-auto">
-    <div class="section-eyebrow">Programme Structure</div>
-    <h2 class="section-title mb-4">2 Years. 4 Semesters.<br/><em>One Powerful Career.</em></h2>
-    <p class="text-[#6b6560] dark:text-[#7a7570] mb-12 max-w-xl">Theory and practical learning combined. Industry-aligned curriculum designed by Alagappa University.</p>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-colors card">
-        <div class="year-pill">Year 1 · Semester 1–2</div>
-        <div class="font-semibold mb-4 text-sm tracking-wide uppercase">Build Your Management Base</div>
-        <ul class="space-y-2 text-sm text-[#6b6560] dark:text-[#7a7570]">
-          <li>· Principles of Management</li>
-          <li>· Managerial Economics</li>
-          <li>· Financial Accounting &amp; Analysis</li>
-          <li>· Organisational Behaviour</li>
-          <li>· Business Communication</li>
-          <li>· Statistics for Business Decisions</li>
-        </ul>
-      </div>
-      <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-colors card">
-        <div class="year-pill">Year 2 · Semester 3</div>
-        <div class="font-semibold mb-4 text-sm tracking-wide uppercase">Specialise &amp; Lead</div>
-        <ul class="space-y-2 text-sm text-[#6b6560] dark:text-[#7a7570]">
-          <li>· Strategic Management</li>
-          <li>· Marketing Management</li>
-          <li>· Human Resource Management</li>
-          <li>· Financial Management</li>
-          <li>· Operations &amp; Supply Chain</li>
-          <li>· Elective Specialisation Track</li>
-        </ul>
-      </div>
-      <div class="border border-[var(--gold)] p-8 bg-[#fdf9f0] dark:bg-[#1a1508] hover:opacity-90 transition-opacity card">
-        <div class="year-pill">Year 2 · Semester 4</div>
-        <div class="font-semibold mb-4 text-sm tracking-wide uppercase">Industry Ready</div>
-        <ul class="space-y-2 text-sm text-[#6b6560] dark:text-[#7a7570]">
-          <li>· Entrepreneurship &amp; Innovation</li>
-          <li>· Business Analytics &amp; AI Tools</li>
-          <li>· Project Management</li>
-          <li>· International Business</li>
-          <li>· Live Capstone Project</li>
-          <li>· Internship &amp; Placement Drive</li>
-        </ul>
-      </div>
-    </div>
-    <div class="mt-10 text-center">
-      <a href="#apply" class="bg-[#0d0d0d] dark:bg-[#e8d5a3] text-[#f9f7f4] dark:text-[#0d0d0d] text-[0.8rem] tracking-[0.1em] uppercase px-10 py-4 hover:opacity-80 transition-opacity inline-block" style="text-decoration:none">Register Now →</a>
-    </div>
-  </div>
-</section>
+    <div class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]"></div>
 
-<div class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]"></div>
-
-<!-- ═══ FEATURES ═══ -->
-<section class="py-20 px-6 bg-[#f9f7f4] dark:bg-[#0f0f0f]">
-  <div class="max-w-6xl mx-auto">
-    <div class="section-eyebrow">What Makes EBS Different</div>
-    <h2 class="section-title mb-12">Beyond the<br/><em>Classroom</em></h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] hover:-translate-y-0.5 transition-all card">
-        <div class="feat-icon">📊</div>
-        <div class="font-medium mb-2">Case-Based Learning</div>
-        <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">Real business scenarios from Indian companies. Strategy isn't learned in lectures — it's practiced in sessions.</p>
+    <!-- ═══ PROGRAMME ═══ -->
+    <section id="programme" class="py-20 px-6 bg-white dark:bg-[#111]">
+      <div class="max-w-6xl mx-auto">
+	<div class="section-eyebrow">Programme Structure</div>
+	<h2 class="section-title mb-4">2 Years. 4 Semesters.<br/><em>One Powerful Career.</em></h2>
+	<p class="text-[#6b6560] dark:text-[#7a7570] mb-12 max-w-xl">Theory and practical learning combined. Industry-aligned curriculum designed by Alagappa University.</p>
+	<div class="grid md:grid-cols-3 gap-6">
+	  <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-colors card">
+	    <div class="year-pill">Year 1 · Semester 1–2</div>
+	    <div class="font-semibold mb-4 text-sm tracking-wide uppercase">Build Your Management Base</div>
+	    <ul class="space-y-2 text-sm text-[#6b6560] dark:text-[#7a7570]">
+	      <li>· Principles of Management</li>
+	      <li>· Managerial Economics</li>
+	      <li>· Financial Accounting &amp; Analysis</li>
+	      <li>· Organisational Behaviour</li>
+	      <li>· Business Communication</li>
+	      <li>· Statistics for Business Decisions</li>
+	    </ul>
+	  </div>
+	  <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-colors card">
+	    <div class="year-pill">Year 2 · Semester 3</div>
+	    <div class="font-semibold mb-4 text-sm tracking-wide uppercase">Specialise &amp; Lead</div>
+	    <ul class="space-y-2 text-sm text-[#6b6560] dark:text-[#7a7570]">
+	      <li>· Strategic Management</li>
+	      <li>· Marketing Management</li>
+	      <li>· Human Resource Management</li>
+	      <li>· Financial Management</li>
+	      <li>· Operations &amp; Supply Chain</li>
+	      <li>· Elective Specialisation Track</li>
+	    </ul>
+	  </div>
+	  <div class="border border-[var(--gold)] p-8 bg-[#fdf9f0] dark:bg-[#1a1508] hover:opacity-90 transition-opacity card">
+	    <div class="year-pill">Year 2 · Semester 4</div>
+	    <div class="font-semibold mb-4 text-sm tracking-wide uppercase">Industry Ready</div>
+	    <ul class="space-y-2 text-sm text-[#6b6560] dark:text-[#7a7570]">
+	      <li>· Entrepreneurship &amp; Innovation</li>
+	      <li>· Business Analytics &amp; AI Tools</li>
+	      <li>· Project Management</li>
+	      <li>· International Business</li>
+	      <li>· Live Capstone Project</li>
+	      <li>· Internship &amp; Placement Drive</li>
+	    </ul>
+	  </div>
+	</div>
+	<div class="mt-10 text-center">
+	  <a href="#apply" class="bg-[#0d0d0d] dark:bg-[#e8d5a3] text-[#f9f7f4] dark:text-[#0d0d0d] text-[0.8rem] tracking-[0.1em] uppercase px-10 py-4 hover:opacity-80 transition-opacity inline-block" style="text-decoration:none">Register Now →</a>
+	</div>
       </div>
-      <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] hover:-translate-y-0.5 transition-all card">
-        <div class="feat-icon">🤝</div>
-        <div class="font-medium mb-2">Industry Masterclasses</div>
-        <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">CEOs, CFOs, and senior leaders from Chennai's business community share live insights with MBA students.</p>
-      </div>
-      <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] hover:-translate-y-0.5 transition-all card">
-        <div class="feat-icon">🌍</div>
-        <div class="font-medium mb-2">Live Business Projects</div>
-        <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">Work on actual business challenges from real companies — not textbook simulations.</p>
-      </div>
-      <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] hover:-translate-y-0.5 transition-all card">
-        <div class="feat-icon">💼</div>
-        <div class="font-medium mb-2">Dedicated Placement Cell</div>
-        <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">Active corporate connections across manufacturing, IT, retail, banking and consulting sectors in Chennai.</p>
-      </div>
-      <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] hover:-translate-y-0.5 transition-all card">
-        <div class="feat-icon">🎓</div>
-        <div class="font-medium mb-2">Cambridge BEC Access</div>
-        <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">EBS students can access the Cambridge Business English Certificate — a globally recognised credential that strengthens your profile.</p>
-      </div>
-      <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] hover:-translate-y-0.5 transition-all card">
-        <div class="feat-icon">🚀</div>
-        <div class="font-medium mb-2">Entrepreneurship Track</div>
-        <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">Business plan development, startup frameworks, and mentorship for those who want to build their own venture.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<div class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]"></div>
+    <div class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]"></div>
 
-<!-- ═══ CAREERS ═══ -->
-<section class="py-20 px-6 bg-white dark:bg-[#111]">
-  <div class="max-w-6xl mx-auto">
-    <div class="section-eyebrow">Career Opportunities</div>
-    <h2 class="section-title mb-12">Where MBA Graduates<br/><em>Go Next</em></h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="p-6 border border-[#e2ddd8] dark:border-[#2a2a2a] hover:border-[var(--gold)] transition-colors dark:bg-[#161616]">
-        <div class="text-xl mb-3">📈</div>
-        <div class="font-medium text-sm mb-1">Business Manager</div>
-        <div class="text-xs" style="color:var(--gold)">₹5L – ₹18L+ per year</div>
+    <!-- ═══ FEATURES ═══ -->
+    <section class="py-20 px-6 bg-[#f9f7f4] dark:bg-[#0f0f0f]">
+      <div class="max-w-6xl mx-auto">
+	<div class="section-eyebrow">What Makes EBS Different</div>
+	<h2 class="section-title mb-12">Beyond the<br/><em>Classroom</em></h2>
+	<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+	  <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] hover:-translate-y-0.5 transition-all card">
+	    <div class="feat-icon">📊</div>
+	    <div class="font-medium mb-2">Case-Based Learning</div>
+	    <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">Real business scenarios from Indian companies. Strategy isn't learned in lectures — it's practiced in sessions.</p>
+	  </div>
+	  <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] hover:-translate-y-0.5 transition-all card">
+	    <div class="feat-icon">🤝</div>
+	    <div class="font-medium mb-2">Industry Masterclasses</div>
+	    <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">CEOs, CFOs, and senior leaders from Chennai's business community share live insights with MBA students.</p>
+	  </div>
+	  <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] hover:-translate-y-0.5 transition-all card">
+	    <div class="feat-icon">🌍</div>
+	    <div class="font-medium mb-2">Live Business Projects</div>
+	    <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">Work on actual business challenges from real companies — not textbook simulations.</p>
+	  </div>
+	  <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] hover:-translate-y-0.5 transition-all card">
+	    <div class="feat-icon">💼</div>
+	    <div class="font-medium mb-2">Dedicated Placement Cell</div>
+	    <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">Active corporate connections across manufacturing, IT, retail, banking and consulting sectors in Chennai.</p>
+	  </div>
+	  <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] hover:-translate-y-0.5 transition-all card">
+	    <div class="feat-icon">🎓</div>
+	    <div class="font-medium mb-2">Cambridge BEC Access</div>
+	    <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">EBS students can access the Cambridge Business English Certificate — a globally recognised credential that strengthens your profile.</p>
+	  </div>
+	  <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] hover:-translate-y-0.5 transition-all card">
+	    <div class="feat-icon">🚀</div>
+	    <div class="font-medium mb-2">Entrepreneurship Track</div>
+	    <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">Business plan development, startup frameworks, and mentorship for those who want to build their own venture.</p>
+	  </div>
+	</div>
       </div>
-      <div class="p-6 border border-[#e2ddd8] dark:border-[#2a2a2a] hover:border-[var(--gold)] transition-colors dark:bg-[#161616]">
-        <div class="text-xl mb-3">💰</div>
-        <div class="font-medium text-sm mb-1">Financial Analyst</div>
-        <div class="text-xs" style="color:var(--gold)">₹5L – ₹16L per year</div>
+    </section>
+
+    <div class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]"></div>
+
+    <!-- ═══ CAREERS ═══ -->
+    <section class="py-20 px-6 bg-white dark:bg-[#111]">
+      <div class="max-w-6xl mx-auto">
+	<div class="section-eyebrow">Career Opportunities</div>
+	<h2 class="section-title mb-12">Where MBA Graduates<br/><em>Go Next</em></h2>
+	<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+	  <div class="p-6 border border-[#e2ddd8] dark:border-[#2a2a2a] hover:border-[var(--gold)] transition-colors dark:bg-[#161616]">
+	    <div class="text-xl mb-3">📈</div>
+	    <div class="font-medium text-sm mb-1">Business Manager</div>
+	    <div class="text-xs" style="color:var(--gold)">₹5L – ₹18L+ per year</div>
+	  </div>
+	  <div class="p-6 border border-[#e2ddd8] dark:border-[#2a2a2a] hover:border-[var(--gold)] transition-colors dark:bg-[#161616]">
+	    <div class="text-xl mb-3">💰</div>
+	    <div class="font-medium text-sm mb-1">Financial Analyst</div>
+	    <div class="text-xs" style="color:var(--gold)">₹5L – ₹16L per year</div>
+	  </div>
+	  <div class="p-6 border border-[#e2ddd8] dark:border-[#2a2a2a] hover:border-[var(--gold)] transition-colors dark:bg-[#161616]">
+	    <div class="text-xl mb-3">📣</div>
+	    <div class="font-medium text-sm mb-1">Marketing Manager</div>
+	    <div class="text-xs" style="color:var(--gold)">₹5L – ₹15L per year</div>
+	  </div>
+	  <div class="p-6 border border-[#e2ddd8] dark:border-[#2a2a2a] hover:border-[var(--gold)] transition-colors dark:bg-[#161616]">
+	    <div class="text-xl mb-3">🧑‍💼</div>
+	    <div class="font-medium text-sm mb-1">HR Manager</div>
+	    <div class="text-xs" style="color:var(--gold)">₹4L – ₹12L per year</div>
+	  </div>
+	  <div class="p-6 border border-[#e2ddd8] dark:border-[#2a2a2a] hover:border-[var(--gold)] transition-colors dark:bg-[#161616]">
+	    <div class="text-xl mb-3">⚙️</div>
+	    <div class="font-medium text-sm mb-1">Operations Manager</div>
+	    <div class="text-xs" style="color:var(--gold)">₹5L – ₹14L per year</div>
+	  </div>
+	  <div class="p-6 border border-[#e2ddd8] dark:border-[#2a2a2a] hover:border-[var(--gold)] transition-colors dark:bg-[#161616]">
+	    <div class="text-xl mb-3">🌐</div>
+	    <div class="font-medium text-sm mb-1">Business Consultant</div>
+	    <div class="text-xs" style="color:var(--gold)">₹6L – ₹20L per year</div>
+	  </div>
+	  <div class="p-6 border border-[#e2ddd8] dark:border-[#2a2a2a] hover:border-[var(--gold)] transition-colors dark:bg-[#161616]">
+	    <div class="text-xl mb-3">📦</div>
+	    <div class="font-medium text-sm mb-1">Supply Chain Manager</div>
+	    <div class="text-xs" style="color:var(--gold)">₹5L – ₹13L per year</div>
+	  </div>
+	  <div class="p-6 border bg-[#fdf9f0] dark:bg-[#1a1508] hover:opacity-90 transition-opacity" style="border-color:var(--gold)">
+	    <div class="text-xl mb-3">🚀</div>
+	    <div class="font-medium text-sm mb-1">Entrepreneur / Founder</div>
+	    <div class="text-xs" style="color:var(--gold)">Unlimited potential</div>
+	  </div>
+	</div>
+	<div class="mt-10 text-center">
+	  <a href="#apply"
+	    class="border border-[#0d0d0d] dark:border-[#e8d5a3] text-[#0d0d0d] dark:text-[#e8d5a3] text-[0.8rem] tracking-[0.1em] uppercase px-10 py-4 hover:bg-[#0d0d0d] hover:text-white dark:hover:bg-[#e8d5a3] dark:hover:text-[#0d0d0d] transition-colors inline-block"
+	    style="text-decoration:none">Get Free Counselling →</a>
+	</div>
       </div>
-      <div class="p-6 border border-[#e2ddd8] dark:border-[#2a2a2a] hover:border-[var(--gold)] transition-colors dark:bg-[#161616]">
-        <div class="text-xl mb-3">📣</div>
-        <div class="font-medium text-sm mb-1">Marketing Manager</div>
-        <div class="text-xs" style="color:var(--gold)">₹5L – ₹15L per year</div>
+    </section>
+
+    <div class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]"></div>
+
+    <!-- ═══ FAQ ═══ -->
+    <section class="py-20 px-6 bg-[#f9f7f4] dark:bg-[#0f0f0f]">
+      <div class="max-w-4xl mx-auto">
+	<div class="section-eyebrow">For Parents — Honest Answers</div>
+	<h2 class="section-title mb-12">Every Question Parents Ask —<br/><em>Answered Directly</em></h2>
+	<div>
+	  <details class="border-t border-[#e2ddd8] dark:border-[#2a2a2a] group">
+	    <summary class="py-5 flex items-center justify-between">
+	      <span class="font-medium text-sm pr-8">"Will my child get a job after the MBA?"</span>
+	      <span class="faq-plus flex-shrink-0"></span>
+	    </summary>
+	    <div class="pb-6 text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">
+	      Yes. EBS graduates have been placed at companies across manufacturing, retail, IT, and financial services in Chennai. India's demand for management professionals continues to grow year on year — MBA holders consistently access higher-paying, faster-growing roles.
+	    </div>
+	  </details>
+	  <details class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]">
+	    <summary class="py-5 flex items-center justify-between">
+	      <span class="font-medium text-sm pr-8">"Is this a proper, recognised degree?"</span>
+	      <span class="faq-plus flex-shrink-0"></span>
+	    </summary>
+	    <div class="pb-6 text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">
+	      Yes. This is an MBA degree affiliated to <strong>Alagappa University</strong> — one of India's recognised central universities. Government approved. Employer respected. Carries the same academic standing as any MBA from a recognised Indian university.
+	    </div>
+	  </details>
+	  <details class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]">
+	    <summary class="py-5 flex items-center justify-between">
+	      <span class="font-medium text-sm pr-8">"Is the campus safe and well-equipped?"</span>
+	      <span class="faq-plus flex-shrink-0"></span>
+	    </summary>
+	    <div class="pb-6 text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">
+	      EBS is located in <strong>West Tambaram, Chennai</strong> — a well-connected area easily accessible from across the city. The campus has experienced faculty, a structured learning environment, and was named <strong>Business School of the Year 2026</strong> in Tamil Nadu.
+	    </div>
+	  </details>
+	  <details class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]">
+	    <summary class="py-5 flex items-center justify-between">
+	      <span class="font-medium text-sm pr-8">"Why EBS and not another MBA college?"</span>
+	      <span class="faq-plus flex-shrink-0"></span>
+	    </summary>
+	    <div class="pb-6 text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">
+	      EBS focuses on practical, career-ready education — not just academic theory. Small batch sizes mean personal attention. Industry connections mean real placements. And the Alagappa University affiliation means your child's degree is credible anywhere in India.
+	    </div>
+	  </details>
+	  <details class="border-t border-b border-[#e2ddd8] dark:border-[#2a2a2a]">
+	    <summary class="py-5 flex items-center justify-between">
+	      <span class="font-medium text-sm pr-8">"What are the stats that matter?"</span>
+	      <span class="faq-plus flex-shrink-0"></span>
+	    </summary>
+	    <div class="pb-6">
+	      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+		<div><div class="stat-val text-2xl">₹21T</div><div class="stat-label text-[#6b6560] dark:text-[#6a6560]">India's Economy Size</div></div>
+		<div><div class="stat-val text-2xl">4.5Cr+</div><div class="stat-label text-[#6b6560] dark:text-[#6a6560]">Management Roles in India</div></div>
+		<div><div class="stat-val text-2xl">2 Yrs</div><div class="stat-label text-[#6b6560] dark:text-[#6a6560]">Full MBA — 4 Semesters</div></div>
+		<div><div class="stat-val text-2xl">100%</div><div class="stat-label text-[#6b6560] dark:text-[#6a6560]">Placement-Oriented Module</div></div>
+	      </div>
+	    </div>
+	  </details>
+	</div>
+	<div class="mt-10">
+	  <a href="#apply" class="bg-[#0d0d0d] dark:bg-[#e8d5a3] text-[#f9f7f4] dark:text-[#0d0d0d] text-[0.8rem] tracking-[0.1em] uppercase px-10 py-4 hover:opacity-80 transition-opacity inline-block" style="text-decoration:none">Get Free Counselling →</a>
+	</div>
       </div>
-      <div class="p-6 border border-[#e2ddd8] dark:border-[#2a2a2a] hover:border-[var(--gold)] transition-colors dark:bg-[#161616]">
-        <div class="text-xl mb-3">🧑‍💼</div>
-        <div class="font-medium text-sm mb-1">HR Manager</div>
-        <div class="text-xs" style="color:var(--gold)">₹4L – ₹12L per year</div>
+    </section>
+
+    <div class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]"></div>
+
+    <!-- ═══ REVIEWS ═══ -->
+    <section class="py-20 px-6 bg-white dark:bg-[#111]">
+      <div class="max-w-6xl mx-auto">
+	<div class="section-eyebrow">Real Stories</div>
+	<h2 class="section-title mb-12">Students Speak.<br/><em>Parents Speak.</em></h2>
+	<div class="grid md:grid-cols-3 gap-8">
+
+	  <div class="review-card">
+	    <div class="stars mb-3">★★★★★</div>
+	    <div class="text-xs tracking-widest uppercase text-[#6b6560] dark:text-[#5a5550] mb-4">🎓 Student Voice</div>
+	    <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed mb-6">
+	      "After 12th, I had no idea what to study. Everyone pushed me toward engineering, but I always loved fashion. Joining EBS was the best decision I made. The studio sessions, factory visits, and placement guidance were everything I needed. I'm now working at a retail brand in Chennai and genuinely love my job."
+	    </p>
+	    <div class="flex items-center gap-3">
+	      <div class="w-8 h-8 rounded-full bg-[#0d0d0d] dark:bg-[#2a2a2a] text-white flex items-center justify-center text-xs font-medium">P</div>
+	      <div>
+		<div class="text-sm font-medium">Priya S.</div>
+		<div class="text-xs text-[#6b6560] dark:text-[#5a5550]">Graduate · Placed at a Retail Brand, Chennai</div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="review-card">
+	    <div class="stars mb-3">★★★★★</div>
+	    <div class="text-xs tracking-widest uppercase text-[#6b6560] dark:text-[#5a5550] mb-4">👨‍👩‍👧 Parent Voice</div>
+	    <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed mb-6">
+	      "My daughter wanted to study fashion and I honestly hesitated. I wanted something 'safe.' But after meeting the EBS counsellor and seeing the campus — the Alagappa University affiliation, the placement records, the studio — I realised this was a serious programme. She is happy, focused, and thriving. My concern was wrong."
+	    </p>
+	    <div class="flex items-center gap-3">
+	      <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-medium text-white" style="background:var(--gold)">R</div>
+	      <div>
+		<div class="text-sm font-medium">Rajesh M.</div>
+		<div class="text-xs text-[#6b6560] dark:text-[#5a5550]">Father of a 2nd Year Student, EBS</div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="review-card">
+	    <div class="stars mb-3">★★★★★</div>
+	    <div class="text-xs tracking-widest uppercase text-[#6b6560] dark:text-[#5a5550] mb-4">🎓 Student Voice</div>
+	    <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed mb-6">
+	      "I was worried that fashion design would only be about drawing. But EBS is completely different — live projects, industry masterclasses, entrepreneurship modules — I already have a plan for my own label. By the time I graduate, I will have real work experience, not just a degree."
+	    </p>
+	    <div class="flex items-center gap-3">
+	      <div class="w-8 h-8 rounded-full bg-[#0d0d0d] dark:bg-[#2a2a2a] text-white flex items-center justify-center text-xs font-medium">M</div>
+	      <div>
+		<div class="text-sm font-medium">Meghna L.</div>
+		<div class="text-xs text-[#6b6560] dark:text-[#5a5550]">3rd Year Student, EBS</div>
+	      </div>
+	    </div>
+	  </div>
+
+	</div>
+	<!-- Trust badges -->
+	<div class="mt-16 pt-10 border-t border-[#e2ddd8] dark:border-[#2a2a2a] flex flex-wrap gap-6 items-center justify-center text-xs tracking-widest uppercase text-[#6b6560] dark:text-[#5a5550]">
+	  <span>🏆 Business School of the Year 2026 – Tamil Nadu</span>
+	  <span>·</span>
+	  <span>🎓 Alagappa University Affiliated</span>
+	  <span>·</span>
+	  <span>🤝 Cambridge BEC Certificate Access</span>
+	  <span>·</span>
+	  <span>📍 West Tambaram, Chennai</span>
+	</div>
       </div>
-      <div class="p-6 border border-[#e2ddd8] dark:border-[#2a2a2a] hover:border-[var(--gold)] transition-colors dark:bg-[#161616]">
-        <div class="text-xl mb-3">⚙️</div>
-        <div class="font-medium text-sm mb-1">Operations Manager</div>
-        <div class="text-xs" style="color:var(--gold)">₹5L – ₹14L per year</div>
+    </section>
+
+    <div class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]"></div>
+
+    <!-- ═══ RIGHT FOR YOU ═══ -->
+    <section class="py-20 px-6 bg-[#f9f7f4] dark:bg-[#0f0f0f]">
+      <div class="max-w-6xl mx-auto">
+	<div class="section-eyebrow">Eligibility Check</div>
+	<h2 class="section-title mb-12">Is This Programme<br/><em>Right for You?</em></h2>
+	<div class="grid md:grid-cols-2 gap-8">
+	  <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-colors card">
+	    <div class="text-xs tracking-widest uppercase mb-6" style="color:var(--gold)">🎓 For Students</div>
+	    <ul class="space-y-3">
+	      <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> You have completed or are completing a Bachelor's degree in any discipline</li>
+	      <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> You want a management career — in corporate, consulting, or your own business</li>
+	      <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> You want practical skills — not just theory and textbooks</li>
+	      <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> You want a real university degree with employer credibility</li>
+	      <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> You are ambitious about where you want to be in 5 years</li>
+	    </ul>
+	  </div>
+	  <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-colors card">
+	    <div class="text-xs tracking-widest uppercase mb-6" style="color:var(--gold)">👨‍👩‍👧 For Parents</div>
+	    <ul class="space-y-3">
+	      <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> Your child has finished their undergraduate degree and is planning next steps</li>
+	      <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> You want assurance of a recognised degree with real placement outcomes</li>
+	      <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> You care about a safe campus, qualified faculty, and a structured environment</li>
+	      <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> You want your investment to lead to a stable, growing career</li>
+	      <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> You are open to a free counselling session before making any decision</li>
+	    </ul>
+	  </div>
+	</div>
+	<div class="mt-10 text-center">
+	  <a href="#apply" class="bg-[#0d0d0d] dark:bg-[#e8d5a3] text-[#f9f7f4] dark:text-[#0d0d0d] text-[0.8rem] tracking-[0.1em] uppercase px-10 py-4 hover:opacity-80 transition-opacity inline-block" style="text-decoration:none">Enroll Now →</a>
+	</div>
       </div>
-      <div class="p-6 border border-[#e2ddd8] dark:border-[#2a2a2a] hover:border-[var(--gold)] transition-colors dark:bg-[#161616]">
-        <div class="text-xl mb-3">🌐</div>
-        <div class="font-medium text-sm mb-1">Business Consultant</div>
-        <div class="text-xs" style="color:var(--gold)">₹6L – ₹20L per year</div>
+    </section>
+
+    <div class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]"></div>
+
+    <!-- ═══ APPLY FORM ═══ -->
+    <section id="apply" class="py-20 px-6 bg-white dark:bg-[#111]">
+      <div class="max-w-6xl mx-auto">
+	<div class="grid md:grid-cols-2 gap-0">
+
+	  <!-- Left copy -->
+	  <div class="pr-0 md:pr-16 mb-12 md:mb-0">
+	    <div class="section-eyebrow">⚡ 2026 Batch — Limited Seats</div>
+	    <h2 class="section-title mb-6">One Decision.<br/><em>One Career</em><br/>That Lasts.</h2>
+	    <p class="text-[#6b6560] dark:text-[#7a7570] leading-relaxed mb-8">
+	      You have read this far because somewhere inside, you already know this is the right path. Fill in the form and our team will personally call you within 24 hours — no pressure, no obligation, just honest guidance.
+	    </p>
+	    <div class="space-y-3 text-sm text-[#6b6560] dark:text-[#7a7570]">
+	      <div class="flex gap-3"><span style="color:var(--gold)">✓</span> Free counselling session — zero commitment</div>
+	      <div class="flex gap-3"><span style="color:var(--gold)">✓</span> Scholarship forms available</div>
+	      <div class="flex gap-3"><span style="color:var(--gold)">✓</span> 100% confidential, no spam</div>
+	    </div>
+	    <div class="mt-10 pt-10 border-t border-[#e2ddd8] dark:border-[#2a2a2a]">
+	      <div class="text-xs tracking-widest uppercase text-[#6b6560] dark:text-[#5a5550] mb-3">Or reach us directly</div>
+	      <a href="tel:+919280251831" class="font-medium hover:opacity-70 transition-opacity">📞 92802 51831</a>
+	      <span class="mx-3 text-[#e2ddd8] dark:text-[#2a2a2a]">|</span>
+	      <a href="tel:+918678969915" class="font-medium hover:opacity-70 transition-opacity">86789 69915</a>
+	    </div>
+	  </div>
+
+	  <!-- Form (always dark) -->
+	  <div class="form-wrap">
+	    <div class="text-xs tracking-widest uppercase mb-8" style="color:var(--gold-light)">Get Your Free Admission Counselling</div>
+	    <form id="leadForm" onsubmit="handleSubmit(event)" class="space-y-8">
+	      <div>
+		<label class="form-label">Full Name *</label>
+		<input type="text" class="form-input" placeholder="Your name" required />
+	      </div>
+	      <div>
+		<label class="form-label">Mobile Number *</label>
+		<input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX" required />
+	      </div>
+	      <div>
+		<label class="form-label">Email Address</label>
+		<input type="email" class="form-input" placeholder="you@email.com" />
+	      </div>
+	      <div>
+		<label class="form-label">Who is enquiring? *</label>
+		<select class="form-input" required>
+		  <option value="" disabled selected>Select…</option>
+		  <option>Graduate Student — Planning MBA</option>
+		  <option>Working Professional — Upskilling</option>
+		  <option>Parent — Enquiring for Child</option>
+		  <option>Both Student and Parent</option>
+		</select>
+	      </div>
+	      <div>
+		<label class="form-label">Highest Qualification</label>
+		<select class="form-input">
+		  <option value="" disabled selected>Select…</option>
+		  <option>Bachelor's Degree (B.A / B.Sc / B.Com / B.E)</option>
+		  <option>Currently Pursuing Final Year</option>
+		  <option>Other</option>
+		</select>
+	      </div>
+	      <button type="submit" class="btn-submit">Yes, I Want Free Counselling →</button>
+	      <p class="text-center text-xs" style="color:rgba(255,255,255,0.3)">🔒 100% confidential. No spam.</p>
+	    </form>
+	    <div id="formSuccess" class="hidden text-center py-8">
+	      <div class="text-3xl mb-4">✓</div>
+	      <div class="serif text-2xl mb-2" style="color:var(--gold-light)">Thank you!</div>
+	      <p class="text-sm" style="color:rgba(255,255,255,0.6)">Our team will call you within 24 hours.<br/>For urgent queries: <a href="tel:+919280251831" style="color:var(--gold-light)">92802 51831</a></p>
+	    </div>
+	  </div>
+
+	</div>
       </div>
-      <div class="p-6 border border-[#e2ddd8] dark:border-[#2a2a2a] hover:border-[var(--gold)] transition-colors dark:bg-[#161616]">
-        <div class="text-xl mb-3">📦</div>
-        <div class="font-medium text-sm mb-1">Supply Chain Manager</div>
-        <div class="text-xs" style="color:var(--gold)">₹5L – ₹13L per year</div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="py-12 px-6 bg-[#2A2429] dark:bg-[#222222] text-white/100">
+      <div class="max-w-6xl mx-auto">
+	<div class="grid md:grid-cols-3 gap-10 mb-10">
+	  <div>
+	    <div class="serif text-xl font-semibold text-white mb-3">Eva Stalin <span style="color:var(--gold)">Business School</span></div>
+	    <p class="text-xs leading-relaxed mt-2">12/27, Muthuranga Mudali St,<br/>next to Deepam Hospital,<br/>West Tambaram, Chennai, Tamil Nadu 600045</p>
+	  </div>
+	  <div>
+	    <div class="text-xs tracking-widest uppercase mb-4 text-white/30">Contact</div>
+	    <div class="space-y-2 text-sm">
+	      <div><a href="tel:+919280251831" class="text-white/70 hover:text-[var(--gold)] transition-colors" style="text-decoration:none">📞 92802 51831</a></div>
+	      <div><a href="tel:+918678969915" class="text-white/70 hover:text-[var(--gold)] transition-colors" style="text-decoration:none">📞 86789 69915</a></div>
+	      <div><a href="mailto:info@evastalinbschool.com" class="text-white/70 hover:text-[var(--gold)] transition-colors" style="text-decoration:none">✉ info@evastalinbschool.com</a></div>
+	    </div>
+	  </div>
+	  <div>
+	    <div class="text-xs tracking-widest uppercase mb-4 text-white/30">Quick Links</div>
+	    <div class="space-y-2 text-sm">
+	      <div><a href="https://www.evastalinbschool.com/application.php" class="text-white/70 hover:text-[var(--gold)] transition-colors" style="text-decoration:none">Application Form</a></div>
+	      <div><a href="https://www.evastalinbschool.com/scholar.php" class="text-white/70 hover:text-[var(--gold)] transition-colors" style="text-decoration:none">Scholarship</a></div>
+	      <div><a href="https://www.evastalinbschool.com/contact.php" class="text-white/70 hover:text-[var(--gold)] transition-colors" style="text-decoration:none">Contact Us</a></div>
+	    </div>
+	  </div>
+	</div>
+	<div class="border-t border-white/[0.07] pt-6 text-xs text-center">
+	  © 2026 Eva Stalin Business School. All rights reserved.
+	</div>
       </div>
-      <div class="p-6 border bg-[#fdf9f0] dark:bg-[#1a1508] hover:opacity-90 transition-opacity" style="border-color:var(--gold)">
-        <div class="text-xl mb-3">🚀</div>
-        <div class="font-medium text-sm mb-1">Entrepreneur / Founder</div>
-        <div class="text-xs" style="color:var(--gold)">Unlimited potential</div>
-      </div>
-    </div>
-    <div class="mt-10 text-center">
-      <a href="#apply"
-        class="border border-[#0d0d0d] dark:border-[#e8d5a3] text-[#0d0d0d] dark:text-[#e8d5a3] text-[0.8rem] tracking-[0.1em] uppercase px-10 py-4 hover:bg-[#0d0d0d] hover:text-white dark:hover:bg-[#e8d5a3] dark:hover:text-[#0d0d0d] transition-colors inline-block"
-        style="text-decoration:none">Get Free Counselling →</a>
-    </div>
-  </div>
-</section>
+    </footer>
 
-<div class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]"></div>
-
-<!-- ═══ FAQ ═══ -->
-<section class="py-20 px-6 bg-[#f9f7f4] dark:bg-[#0f0f0f]">
-  <div class="max-w-4xl mx-auto">
-    <div class="section-eyebrow">For Parents — Honest Answers</div>
-    <h2 class="section-title mb-12">Every Question Parents Ask —<br/><em>Answered Directly</em></h2>
-    <div>
-      <details class="border-t border-[#e2ddd8] dark:border-[#2a2a2a] group">
-        <summary class="py-5 flex items-center justify-between">
-          <span class="font-medium text-sm pr-8">"Will my child get a job after the MBA?"</span>
-          <span class="faq-plus flex-shrink-0"></span>
-        </summary>
-        <div class="pb-6 text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">
-          Yes. EBS graduates have been placed at companies across manufacturing, retail, IT, and financial services in Chennai. India's demand for management professionals continues to grow year on year — MBA holders consistently access higher-paying, faster-growing roles.
-        </div>
-      </details>
-      <details class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]">
-        <summary class="py-5 flex items-center justify-between">
-          <span class="font-medium text-sm pr-8">"Is this a proper, recognised degree?"</span>
-          <span class="faq-plus flex-shrink-0"></span>
-        </summary>
-        <div class="pb-6 text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">
-          Yes. This is an MBA degree affiliated to <strong>Alagappa University</strong> — one of India's recognised central universities. Government approved. Employer respected. Carries the same academic standing as any MBA from a recognised Indian university.
-        </div>
-      </details>
-      <details class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]">
-        <summary class="py-5 flex items-center justify-between">
-          <span class="font-medium text-sm pr-8">"Is the campus safe and well-equipped?"</span>
-          <span class="faq-plus flex-shrink-0"></span>
-        </summary>
-        <div class="pb-6 text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">
-          EBS is located in <strong>West Tambaram, Chennai</strong> — a well-connected area easily accessible from across the city. The campus has experienced faculty, a structured learning environment, and was named <strong>Business School of the Year 2026</strong> in Tamil Nadu.
-        </div>
-      </details>
-      <details class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]">
-        <summary class="py-5 flex items-center justify-between">
-          <span class="font-medium text-sm pr-8">"Why EBS and not another MBA college?"</span>
-          <span class="faq-plus flex-shrink-0"></span>
-        </summary>
-        <div class="pb-6 text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed">
-          EBS focuses on practical, career-ready education — not just academic theory. Small batch sizes mean personal attention. Industry connections mean real placements. And the Alagappa University affiliation means your child's degree is credible anywhere in India.
-        </div>
-      </details>
-      <details class="border-t border-b border-[#e2ddd8] dark:border-[#2a2a2a]">
-        <summary class="py-5 flex items-center justify-between">
-          <span class="font-medium text-sm pr-8">"What are the stats that matter?"</span>
-          <span class="faq-plus flex-shrink-0"></span>
-        </summary>
-        <div class="pb-6">
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
-            <div><div class="stat-val text-2xl">₹21T</div><div class="stat-label text-[#6b6560] dark:text-[#6a6560]">India's Economy Size</div></div>
-            <div><div class="stat-val text-2xl">4.5Cr+</div><div class="stat-label text-[#6b6560] dark:text-[#6a6560]">Management Roles in India</div></div>
-            <div><div class="stat-val text-2xl">2 Yrs</div><div class="stat-label text-[#6b6560] dark:text-[#6a6560]">Full MBA — 4 Semesters</div></div>
-            <div><div class="stat-val text-2xl">100%</div><div class="stat-label text-[#6b6560] dark:text-[#6a6560]">Placement-Oriented Module</div></div>
-          </div>
-        </div>
-      </details>
-    </div>
-    <div class="mt-10">
-      <a href="#apply" class="bg-[#0d0d0d] dark:bg-[#e8d5a3] text-[#f9f7f4] dark:text-[#0d0d0d] text-[0.8rem] tracking-[0.1em] uppercase px-10 py-4 hover:opacity-80 transition-opacity inline-block" style="text-decoration:none">Get Free Counselling →</a>
-    </div>
-  </div>
-</section>
-
-<div class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]"></div>
-
-<!-- ═══ REVIEWS ═══ -->
-<section class="py-20 px-6 bg-white dark:bg-[#111]">
-  <div class="max-w-6xl mx-auto">
-    <div class="section-eyebrow">Real Stories</div>
-    <h2 class="section-title mb-12">Students Speak.<br/><em>Parents Speak.</em></h2>
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <div class="review-card">
-        <div class="stars mb-3">★★★★★</div>
-        <div class="text-xs tracking-widest uppercase text-[#6b6560] dark:text-[#5a5550] mb-4">🎓 Student Voice</div>
-        <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed mb-6">
-          "After 12th, I had no idea what to study. Everyone pushed me toward engineering, but I always loved fashion. Joining EBS was the best decision I made. The studio sessions, factory visits, and placement guidance were everything I needed. I'm now working at a retail brand in Chennai and genuinely love my job."
-        </p>
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-full bg-[#0d0d0d] dark:bg-[#2a2a2a] text-white flex items-center justify-center text-xs font-medium">P</div>
-          <div>
-            <div class="text-sm font-medium">Priya S.</div>
-            <div class="text-xs text-[#6b6560] dark:text-[#5a5550]">Graduate · Placed at a Retail Brand, Chennai</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-card">
-        <div class="stars mb-3">★★★★★</div>
-        <div class="text-xs tracking-widest uppercase text-[#6b6560] dark:text-[#5a5550] mb-4">👨‍👩‍👧 Parent Voice</div>
-        <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed mb-6">
-          "My daughter wanted to study fashion and I honestly hesitated. I wanted something 'safe.' But after meeting the EBS counsellor and seeing the campus — the Alagappa University affiliation, the placement records, the studio — I realised this was a serious programme. She is happy, focused, and thriving. My concern was wrong."
-        </p>
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-medium text-white" style="background:var(--gold)">R</div>
-          <div>
-            <div class="text-sm font-medium">Rajesh M.</div>
-            <div class="text-xs text-[#6b6560] dark:text-[#5a5550]">Father of a 2nd Year Student, EBS</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-card">
-        <div class="stars mb-3">★★★★★</div>
-        <div class="text-xs tracking-widest uppercase text-[#6b6560] dark:text-[#5a5550] mb-4">🎓 Student Voice</div>
-        <p class="text-sm text-[#6b6560] dark:text-[#7a7570] leading-relaxed mb-6">
-          "I was worried that fashion design would only be about drawing. But EBS is completely different — live projects, industry masterclasses, entrepreneurship modules — I already have a plan for my own label. By the time I graduate, I will have real work experience, not just a degree."
-        </p>
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-full bg-[#0d0d0d] dark:bg-[#2a2a2a] text-white flex items-center justify-center text-xs font-medium">M</div>
-          <div>
-            <div class="text-sm font-medium">Meghna L.</div>
-            <div class="text-xs text-[#6b6560] dark:text-[#5a5550]">3rd Year Student, EBS</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <!-- Trust badges -->
-    <div class="mt-16 pt-10 border-t border-[#e2ddd8] dark:border-[#2a2a2a] flex flex-wrap gap-6 items-center justify-center text-xs tracking-widest uppercase text-[#6b6560] dark:text-[#5a5550]">
-      <span>🏆 Business School of the Year 2026 – Tamil Nadu</span>
-      <span>·</span>
-      <span>🎓 Alagappa University Affiliated</span>
-      <span>·</span>
-      <span>🤝 Cambridge BEC Certificate Access</span>
-      <span>·</span>
-      <span>📍 West Tambaram, Chennai</span>
-    </div>
-  </div>
-</section>
-
-<div class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]"></div>
-
-<!-- ═══ RIGHT FOR YOU ═══ -->
-<section class="py-20 px-6 bg-[#f9f7f4] dark:bg-[#0f0f0f]">
-  <div class="max-w-6xl mx-auto">
-    <div class="section-eyebrow">Eligibility Check</div>
-    <h2 class="section-title mb-12">Is This Programme<br/><em>Right for You?</em></h2>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-colors card">
-        <div class="text-xs tracking-widest uppercase mb-6" style="color:var(--gold)">🎓 For Students</div>
-        <ul class="space-y-3">
-          <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> You have completed or are completing a Bachelor's degree in any discipline</li>
-          <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> You want a management career — in corporate, consulting, or your own business</li>
-          <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> You want practical skills — not just theory and textbooks</li>
-          <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> You want a real university degree with employer credibility</li>
-          <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> You are ambitious about where you want to be in 5 years</li>
-        </ul>
-      </div>
-      <div class="border border-[#e2ddd8] dark:border-[#2a2a2a] bg-white dark:bg-[#161616] p-8 hover:border-[var(--gold)] transition-colors card">
-        <div class="text-xs tracking-widest uppercase mb-6" style="color:var(--gold)">👨‍👩‍👧 For Parents</div>
-        <ul class="space-y-3">
-          <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> Your child has finished their undergraduate degree and is planning next steps</li>
-          <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> You want assurance of a recognised degree with real placement outcomes</li>
-          <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> You care about a safe campus, qualified faculty, and a structured environment</li>
-          <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> You want your investment to lead to a stable, growing career</li>
-          <li class="flex gap-3 text-sm"><span style="color:var(--gold)" class="mt-0.5 flex-shrink-0">✓</span> You are open to a free counselling session before making any decision</li>
-        </ul>
-      </div>
-    </div>
-    <div class="mt-10 text-center">
-      <a href="#apply" class="bg-[#0d0d0d] dark:bg-[#e8d5a3] text-[#f9f7f4] dark:text-[#0d0d0d] text-[0.8rem] tracking-[0.1em] uppercase px-10 py-4 hover:opacity-80 transition-opacity inline-block" style="text-decoration:none">Enroll Now →</a>
-    </div>
-  </div>
-</section>
-
-<div class="border-t border-[#e2ddd8] dark:border-[#2a2a2a]"></div>
-
-<!-- ═══ APPLY FORM ═══ -->
-<section id="apply" class="py-20 px-6 bg-white dark:bg-[#111]">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-0">
-
-      <!-- Left copy -->
-      <div class="pr-0 md:pr-16 mb-12 md:mb-0">
-        <div class="section-eyebrow">⚡ 2026 Batch — Limited Seats</div>
-        <h2 class="section-title mb-6">One Decision.<br/><em>One Career</em><br/>That Lasts.</h2>
-        <p class="text-[#6b6560] dark:text-[#7a7570] leading-relaxed mb-8">
-          You have read this far because somewhere inside, you already know this is the right path. Fill in the form and our team will personally call you within 24 hours — no pressure, no obligation, just honest guidance.
-        </p>
-        <div class="space-y-3 text-sm text-[#6b6560] dark:text-[#7a7570]">
-          <div class="flex gap-3"><span style="color:var(--gold)">✓</span> Free counselling session — zero commitment</div>
-          <div class="flex gap-3"><span style="color:var(--gold)">✓</span> Scholarship forms available</div>
-          <div class="flex gap-3"><span style="color:var(--gold)">✓</span> 100% confidential, no spam</div>
-        </div>
-        <div class="mt-10 pt-10 border-t border-[#e2ddd8] dark:border-[#2a2a2a]">
-          <div class="text-xs tracking-widest uppercase text-[#6b6560] dark:text-[#5a5550] mb-3">Or reach us directly</div>
-          <a href="tel:+919280251831" class="font-medium hover:opacity-70 transition-opacity">📞 92802 51831</a>
-          <span class="mx-3 text-[#e2ddd8] dark:text-[#2a2a2a]">|</span>
-          <a href="tel:+918678969915" class="font-medium hover:opacity-70 transition-opacity">86789 69915</a>
-        </div>
-      </div>
-
-      <!-- Form (always dark) -->
-      <div class="form-wrap">
-        <div class="text-xs tracking-widest uppercase mb-8" style="color:var(--gold-light)">Get Your Free Admission Counselling</div>
-        <form id="leadForm" onsubmit="handleSubmit(event)" class="space-y-8">
-          <div>
-            <label class="form-label">Full Name *</label>
-            <input type="text" class="form-input" placeholder="Your name" required />
-          </div>
-          <div>
-            <label class="form-label">Mobile Number *</label>
-            <input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX" required />
-          </div>
-          <div>
-            <label class="form-label">Email Address</label>
-            <input type="email" class="form-input" placeholder="you@email.com" />
-          </div>
-          <div>
-            <label class="form-label">Who is enquiring? *</label>
-            <select class="form-input" required>
-              <option value="" disabled selected>Select…</option>
-              <option>Graduate Student — Planning MBA</option>
-              <option>Working Professional — Upskilling</option>
-              <option>Parent — Enquiring for Child</option>
-              <option>Both Student and Parent</option>
-            </select>
-          </div>
-          <div>
-            <label class="form-label">Highest Qualification</label>
-            <select class="form-input">
-              <option value="" disabled selected>Select…</option>
-              <option>Bachelor's Degree (B.A / B.Sc / B.Com / B.E)</option>
-              <option>Currently Pursuing Final Year</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <button type="submit" class="btn-submit">Yes, I Want Free Counselling →</button>
-          <p class="text-center text-xs" style="color:rgba(255,255,255,0.3)">🔒 100% confidential. No spam.</p>
-        </form>
-        <div id="formSuccess" class="hidden text-center py-8">
-          <div class="text-3xl mb-4">✓</div>
-          <div class="serif text-2xl mb-2" style="color:var(--gold-light)">Thank you!</div>
-          <p class="text-sm" style="color:rgba(255,255,255,0.6)">Our team will call you within 24 hours.<br/>For urgent queries: <a href="tel:+919280251831" style="color:var(--gold-light)">92802 51831</a></p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══ FOOTER ═══ -->
-<footer class="py-12 px-6 bg-[#2A2429] dark:bg-[#222222] text-white/100">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-3 gap-10 mb-10">
-      <div>
-        <div class="serif text-xl font-semibold text-white mb-3">Eva Stalin <span style="color:var(--gold)">Business School</span></div>
-        <p class="text-xs leading-relaxed mt-2">12/27, Muthuranga Mudali St,<br/>next to Deepam Hospital,<br/>West Tambaram, Chennai, Tamil Nadu 600045</p>
-      </div>
-      <div>
-        <div class="text-xs tracking-widest uppercase mb-4 text-white/30">Contact</div>
-        <div class="space-y-2 text-sm">
-          <div><a href="tel:+919280251831" class="text-white/70 hover:text-[var(--gold)] transition-colors" style="text-decoration:none">📞 92802 51831</a></div>
-          <div><a href="tel:+918678969915" class="text-white/70 hover:text-[var(--gold)] transition-colors" style="text-decoration:none">📞 86789 69915</a></div>
-          <div><a href="mailto:info@evastalinbschool.com" class="text-white/70 hover:text-[var(--gold)] transition-colors" style="text-decoration:none">✉ info@evastalinbschool.com</a></div>
-        </div>
-      </div>
-      <div>
-        <div class="text-xs tracking-widest uppercase mb-4 text-white/30">Quick Links</div>
-        <div class="space-y-2 text-sm">
-          <div><a href="https://www.evastalinbschool.com/application.php" class="text-white/70 hover:text-[var(--gold)] transition-colors" style="text-decoration:none">Application Form</a></div>
-          <div><a href="https://www.evastalinbschool.com/scholar.php" class="text-white/70 hover:text-[var(--gold)] transition-colors" style="text-decoration:none">Scholarship</a></div>
-          <div><a href="https://www.evastalinbschool.com/contact.php" class="text-white/70 hover:text-[var(--gold)] transition-colors" style="text-decoration:none">Contact Us</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="border-t border-white/[0.07] pt-6 text-xs text-center">
-      © 2026 Eva Stalin Business School. All rights reserved.
-    </div>
-  </div>
-</footer>
-
-<script>
-  // ── Dark mode toggle ──────────────────────────────────────
-  function toggleTheme() {
-    const html = document.documentElement;
-    const isDark = html.classList.toggle('dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    document.getElementById('modeLabel').textContent = isDark ? 'Dark' : 'Light';
-  }
-
-  // Set initial label
-  document.addEventListener('DOMContentLoaded', () => {
-    const isDark = document.documentElement.classList.contains('dark');
-    document.getElementById('modeLabel').textContent = isDark ? 'Dark' : 'Light';
-  });
-
-  // ── Form submit ───────────────────────────────────────────
-  function handleSubmit(e) {
-    e.preventDefault();
-    document.getElementById('leadForm').classList.add('hidden');
-    document.getElementById('formSuccess').classList.remove('hidden');
-  }
-
-  // ── Scroll-triggered fade ─────────────────────────────────
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.08 });
-
-  document.querySelectorAll('.card, .review-card, details').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(16px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease, background-color 0.3s ease, border-color 0.3s ease';
-    observer.observe(el);
-  });
-</script>
+    <script src="script.js"></script>
 </body>
+
 </html>
