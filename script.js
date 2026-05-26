@@ -24,11 +24,26 @@ console.log("MBA Landing page loaded");
   });
 
   // ── Form submit ───────────────────────────────────────────
-  function handleSubmit(e) {
+async function handleSubmit(e) {
     e.preventDefault();
-    document.getElementById('leadForm').classList.add('hidden');
-    document.getElementById('formSuccess').classList.remove('hidden');
-  }
+    const form = document.getElementById('leadForm');
+    const data = new FormData(form);
+
+    const response = await fetch("https://formspree.io/f/mjgzalwe", {
+	method: "POST",
+	body: data,
+	headers: { 'Accept': 'application/json' }
+    });
+
+      if (response.ok) {
+	form.classList.add('hidden');
+	document.getElementById('formSuccess').classList.remove('hidden');
+      } else {
+	alert("Something went wrong. Please try again or call us directly.");
+      }
+    }
+
+  
 
   // ── Scroll-triggered fade ─────────────────────────────────
   const observer = new IntersectionObserver((entries) => {

@@ -535,19 +535,19 @@
 	    <form id="leadForm" onsubmit="handleSubmit(event)" class="space-y-8">
 	      <div>
 		<label class="form-label">Full Name *</label>
-		<input type="text" class="form-input" placeholder="Your name" required />
+		<input type="text" name="full_name" class="form-input" placeholder="Your name" required />
 	      </div>
 	      <div>
 		<label class="form-label">Mobile Number *</label>
-		<input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX" required />
+		<input type="tel" name="mobile" class="form-input" placeholder="+91 XXXXX XXXXX" required />
 	      </div>
 	      <div>
 		<label class="form-label">Email Address</label>
-		<input type="email" class="form-input" placeholder="you@email.com" />
+		<input type="email" name="email" class="form-input" placeholder="you@email.com" />
 	      </div>
 	      <div>
 		<label class="form-label">Who is enquiring? *</label>
-		<select class="form-input" required>
+		<select name="enquiry_type" class="form-input" required>
 		  <option value="" disabled selected>Select…</option>
 		  <option>Graduate Student — Planning MBA</option>
 		  <option>Working Professional — Upskilling</option>
@@ -557,7 +557,7 @@
 	      </div>
 	      <div>
 		<label class="form-label">Highest Qualification</label>
-		<select class="form-input">
+		<select name="qualification" class="form-input">
 		  <option value="" disabled selected>Select…</option>
 		  <option>Bachelor's Degree (B.A / B.Sc / B.Com / B.E)</option>
 		  <option>Currently Pursuing Final Year</option>
